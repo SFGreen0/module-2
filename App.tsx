@@ -1,10 +1,12 @@
-import { SafeAreaView, StyleSheet, Image } from 'react-native';
+import { SafeAreaView, StyleSheet, Image, ScrollView } from 'react-native';
+import CardFront from './CardFront.js';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Image style={styles.infoLogo} source={require('./info-logo.png')} blurRadius={0} />
-      <Image style={styles.reactLogo} source={require('./react-logo.png')} blurRadius={8} />
+    <SafeAreaView style={[styles.container, {flex: 1}, {backgroundColor: 'purple'}]}>
+      <ScrollView style={[{padding: 15}, {flex: 1}]}>
+        <CardFront />
+      </ScrollView>
      </SafeAreaView>
   );
 }
